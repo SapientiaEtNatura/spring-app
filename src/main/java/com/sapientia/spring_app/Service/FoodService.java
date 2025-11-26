@@ -30,7 +30,7 @@ public class FoodService {
     //Dentro dos argumentos de Save, ele requer uma Entidade, sendo essa food.
 
 //DELETAR
-    public void delete(Integer id){
+    public void delete(Long id){
         foodRepository.deleteById(id);
     } //Ele faz a função para que é feito Deletar por ID onde repassas o ID na sua sobrecarga
 

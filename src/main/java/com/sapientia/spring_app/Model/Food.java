@@ -21,7 +21,7 @@ public class Food {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Valor gerado a esse ID - Identity
     //A estratégia é gerá-lo automaticamente, partindo do número 1
-    private Integer id;
+    private Long id;
 
     private String name;
     private LocalDateTime expirationDate;
