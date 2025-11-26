@@ -11,6 +11,12 @@ import java.util.List;
 @RequestMapping("/food") //Usado para mapear as rotas dos nossos controllers
 public class FoodController {
 
+    @GetMapping("/boasvindas")
+    public String boasVindas(){
+        return "Essa é minha primeira mensagem, " +
+                "Bem-Vindo!";
+    }
+
     //Injeção de Dependência, agora o controller sabe que o Service existe
     private final FoodService foodService;
     //É necessário um construtor para inicializar o nosso Service
@@ -21,7 +27,7 @@ public class FoodController {
     public List<Food> getAll(){return foodService.getAll();}
 
 @PostMapping
-//Ao fazer o méttodo post, nossa função create pega do corpo do nosso modelo (os atributos) e define como parâmetro
+//Ao fazer o method post, nossa função create pega do corpo do nosso modelo (os atributos) e define como parâmetro
     public Food create(@RequestBody Food food){
         return foodService.save(food);
 }
